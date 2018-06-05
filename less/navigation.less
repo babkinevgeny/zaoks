@@ -1,0 +1,119 @@
+.header{
+  margin: 0;
+  padding: 0;
+  // background: url(../img/header-background.jpg) center no-repeat;
+  background: #000;
+  padding-top: 22px;
+  &__row{
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+  }
+  &__column{
+    width: 50%;
+    margin: 0;
+    padding: 0px 45px;
+    &--left{
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      .header__block{
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        flex-direction: column;
+        padding-left: 21px;
+        padding-top: 40px;
+      }
+    }
+    &--right{
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      padding-top: 10px;
+      .header__block{
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        flex-direction: column;
+        &:first-child{
+          margin-left: auto;
+          margin-right: 25px;
+        }
+        &:last-child{
+          margin-right: 0px;
+          margin-left: 0px;
+          .header__info{
+            &:first-child{
+              .aligner{
+                display: -webkit-flex;
+                display: -ms-flex;
+                display: flex;
+                flex-direction: column;
+              }
+            }
+          }
+        }
+      }
+    }
+    span{
+      color: #fff;
+      font-size: 16px;
+      font-family: 'Open Sans', Arial, sans-serif;
+      display: inline-block;
+      margin-bottom: 22px;
+      line-height: 16px;
+    }
+    img{
+      margin-bottom: 10px;
+    }
+  }
+  &__info{
+    font-size: 16px;
+    line-height: 16px;
+    color: #fff;
+    font-family: 'Open Sans', Arial, sans-serif;
+    min-height: 46px;
+    margin: 6px 0;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    align-items: center;
+    i{
+      display: block;
+      width: 46px;
+      height: 46px;
+      background: red;
+      margin-right: 14px;
+    }
+  }
+}
+
+.navigation{
+  border-top: 2px solid #06abdd;
+  &__list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+    width: 967px;
+    margin: 0 auto;
+  }
+  &__item{
+    color: #fff;
+    line-height: 43px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 3px;
+    padding: 0px 30px 0px 15px;
+    cursor: default;
+    height: 43px;
+    &:hover{
+      background: #474747;
+    }
+  }
+}
