@@ -8,6 +8,8 @@
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
+    max-width: 1456px;
+    margin: 0 auto;
   }
   &__column{
     width: 50%;
@@ -30,7 +32,7 @@
       display: -webkit-flex;
       display: -ms-flex;
       display: flex;
-      padding-top: 10px;
+      padding-top: 20px;
       .header__block{
         display: -webkit-flex;
         display: -ms-flex;
@@ -39,6 +41,18 @@
         &:first-child{
           margin-left: auto;
           margin-right: 25px;
+          .header__info{
+            &:nth-child(1){
+              &::before{
+                background: url('../img/location-pointer.svg') center no-repeat;
+              }
+            }
+            &:nth-child(2){
+              &::before{
+                background: url('../img/watch.svg') center no-repeat;
+              }
+            }
+          }
         }
         &:last-child{
           margin-right: 0px;
@@ -50,6 +64,41 @@
                 display: -ms-flex;
                 display: flex;
                 flex-direction: column;
+                a{
+                  color: #fff;
+                  text-decoration: none;
+                  margin-bottom: 5px;
+                }
+              }
+            }
+            &:nth-child(1){
+              &::before{
+                background: url('../img/call-answer.svg') center no-repeat;
+              }
+            }
+            &:nth-child(2){
+              color: #06abdd;
+              font-weight: bold;
+              text-transform: uppercase;
+              cursor: pointer;
+              -webkit-transition: all 0.3s ease;
+              -moz-transition: all 0.3s ease;
+              -o-transition: all 0.3s ease;
+              -ms-transition: all 0.3s ease;
+              transition: all 0.3s ease;
+              &::before{
+                background: url('../img/message.svg') center no-repeat;
+                border-color: #06abdd;
+              }
+              &:hover{
+                -webkit-transition: all 0.3s ease;
+                -moz-transition: all 0.3s ease;
+                -o-transition: all 0.3s ease;
+                -ms-transition: all 0.3s ease;
+                transition: all 0.3s ease;
+                -webkit-transform: scale(1.2);
+                -ms-transform: scale(1.2);
+                transform: scale(1.2);
               }
             }
           }
@@ -79,11 +128,14 @@
     display: -ms-flex;
     display: flex;
     align-items: center;
-    i{
+    position: relative;
+    &::before{
+      content: '';
       display: block;
-      width: 46px;
       height: 46px;
-      background: red;
+      width: 46px;
+      border: 2px solid #fff;
+      border-radius: 50%;
       margin-right: 14px;
     }
   }

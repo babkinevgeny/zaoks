@@ -4,6 +4,11 @@ body {
   padding: 0;
   font-family: 'Open Sans', Arial, sans-serif;
 }
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
 .clearfix::after {
   content: '';
   display: table;
@@ -23,6 +28,8 @@ body {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
+  max-width: 1456px;
+  margin: 0 auto;
 }
 .header__column {
   width: 50%;
@@ -46,7 +53,7 @@ body {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
-  padding-top: 10px;
+  padding-top: 20px;
 }
 .header__column--right .header__block {
   display: -webkit-flex;
@@ -58,6 +65,12 @@ body {
   margin-left: auto;
   margin-right: 25px;
 }
+.header__column--right .header__block:first-child .header__info:nth-child(1)::before {
+  background: url('../img/location-pointer.svg') center no-repeat;
+}
+.header__column--right .header__block:first-child .header__info:nth-child(2)::before {
+  background: url('../img/watch.svg') center no-repeat;
+}
 .header__column--right .header__block:last-child {
   margin-right: 0px;
   margin-left: 0px;
@@ -67,6 +80,39 @@ body {
   display: -ms-flex;
   display: flex;
   flex-direction: column;
+}
+.header__column--right .header__block:last-child .header__info:first-child .aligner a {
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+.header__column--right .header__block:last-child .header__info:nth-child(1)::before {
+  background: url('../img/call-answer.svg') center no-repeat;
+}
+.header__column--right .header__block:last-child .header__info:nth-child(2) {
+  color: #06abdd;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.header__column--right .header__block:last-child .header__info:nth-child(2)::before {
+  background: url('../img/message.svg') center no-repeat;
+  border-color: #06abdd;
+}
+.header__column--right .header__block:last-child .header__info:nth-child(2):hover {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
 }
 .header__column span {
   color: #fff;
@@ -90,12 +136,15 @@ body {
   display: -ms-flex;
   display: flex;
   align-items: center;
+  position: relative;
 }
-.header__info i {
+.header__info::before {
+  content: '';
   display: block;
-  width: 46px;
   height: 46px;
-  background: red;
+  width: 46px;
+  border: 2px solid #fff;
+  border-radius: 50%;
   margin-right: 14px;
 }
 .navigation {
