@@ -15,10 +15,10 @@
       <div class="header__row">
         <div class="header__column header__column--left">
           <a href="index.html"><img src="img/logo.png" alt="Логотип Set Service Group" width="104" height="125"></a>
-          <div class="header__block">
-            <span>Поставка металлопроката</span>
-            <span>Полный цикл металлообработки</span>
-            <img src="img/ico_header-min.png" alt="ISO 9001 2015" width="39" height="42">
+          <div class="hamburger">
+            <span class="hamburger__item"></span>
+            <span class="hamburger__item"></span>
+            <span class="hamburger__item"></span>
           </div>
         </div>
         <div class="header__column header__column--right">
@@ -37,18 +37,89 @@
           </div>
         </div>
       </div>
-      <nav class="navigation">
-        <ul class="navigation__list">
-          <li class="navigation__item">О нас</li>
-          <li class="navigation__item">Металлопрокат</li>
-          <li class="navigation__item">Металлообработка</li>
-          <li class="navigation__item">Изделия</li>
-          <li class="navigation__item">Прайс-лист</li>
-          <li class="navigation__item">Справочник</li>
-          <li class="navigation__item">Контакты</li>
-        </ul>
-      </nav>
     </div>
   </header>
+  <nav class="navigation">
+    <div class="navigation__btn"></div>
+    <ul class="navigation__list">
+      <div class="navigation__column navigation__column--left">
+        <li class="navigation__title">
+          О нас
+          <ul class="navigation__underlist">
+            <li class="navigation__undertitle"><a href="">Нас рекомендуют</a></li>
+            <li class="navigation__undertitle"><a href="">О компании</a></li>
+            <li class="navigation__undertitle"><a href="">Сертификаты</a></li>
+            <li class="navigation__undertitle"><a href="">Сотрудничество</a></li>
+            <li class="navigation__undertitle"><a href="">Новости</a></li>
+            <li class="navigation__undertitle"><a href="">Наша команда</a></li>
+            <li class="navigation__undertitle"><a href="">Учредительные документы</a></li>
+            <li class="navigation__undertitle"><a href="">Наши ценности</a></li>
+            <li class="navigation__undertitle"><a href="">Вакансии</a></li>
+          </ul>
+        </li>
+        <li class="navigation__title">
+          Прайс-лист
+          <ul class="navigation__underlist">
+            <li class="navigation__undertitle"><a href="">Черный металлопрокат</a></li>
+            <li class="navigation__undertitle"><a href="">Цветной металлопрокат</a></li>
+            <li class="navigation__undertitle"><a href="">Нержавеющий металлопрокат</a></li>
+            <li class="navigation__undertitle"><a href="">Специальные стали и сплавы</a></li>
+          </ul>
+        </li>
+      </div>
+      <div class="navigation__column navigation__column--center">
+        <li class="navigation__title">
+          Металлообработка
+          <ul class="navigation__underlist">
+            <li class="navigation__undertitle"><a href="">Резка металла</a></li>
+            <li class="navigation__undertitle"><a href="">Гибка металла</a></li>
+            <li class="navigation__undertitle"><a href="">Термообработка</a></li>
+            <li class="navigation__undertitle"><a href="">Слесарная обработка</a></li>
+            <li class="navigation__undertitle"><a href="">Технолог. металлоконструкции и механизмы</a></li>
+            <li class="navigation__undertitle"><a href="">Мехобработка металла</a></li>
+            <li class="navigation__undertitle"><a href="">Нанесение покрытий</a></li>
+            <li class="navigation__undertitle"><a href="">Раработка КМ, КМД</a></li>
+            <li class="navigation__undertitle"><a href="">Изготовление металлоконструкций</a></li>
+            <li class="navigation__undertitle"><a href="">Доставка</a></li>
+          </ul>
+        </li>
+        <li class="navigation__title">Справочник</li>
+        <li class="navigation__title">Контакты</li>
+      </div>
+      <div class="navigation__column navigation__column--right">
+        <li class="navigation__title">
+          Изделия
+          <ul class="navigation__underlist">
+            <li class="navigation__undertitle"><a href="">Валы</a></li>
+            <li class="navigation__undertitle"><a href="">Муфты</a></li>
+            <li class="navigation__undertitle"><a href="">Фланцы</a></li>
+            <li class="navigation__undertitle"><a href="">Шестерни</a></li>
+            <li class="navigation__undertitle"><a href="">Кронштейны</a></li>
+            <li class="navigation__undertitle"><a href="">Колеса зубчатые</a></li>
+            <li class="navigation__undertitle"><a href="">Закладные детали</a></li>
+            <li class="navigation__undertitle"><a href="">Фундаментные болты</a></li>
+            <li class="navigation__undertitle"><a href="">Шкафы электрические</a></li>
+            <li class="navigation__undertitle"><a href="">Опоры трубопроводов</a></li>
+          </ul>
+        </li>
+        <ul class="social">
+          <li class="social__item"><a href="#"><img src="img/facebook.png" alt=""></a></li>
+          <li class="social__item"><a href="#"><img src="img/vk.png" alt=""></a></li>
+          <li class="social__item"><a href="#"><img src="img/instagram.png" alt=""></a></li>
+        </ul>
+      </div>
+    </ul>
+  </nav>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script>
+  $('.hamburger').click(function(){
+    $('header').addClass('blur');
+    $('.navigation').fadeIn().css('display', 'flex');
+  })
+  $('.navigation__btn').click(function(){
+    $('header').removeClass('blur');
+    $('.navigation').fadeOut();
+  })
+  </script>
 </body>
 </html>
