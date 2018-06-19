@@ -3,7 +3,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', Arial, sans-serif;
-  background: url('../img/welding.jpg') center no-repeat;
   background-size: cover;
   height: 100vh;
 }
@@ -11,6 +10,11 @@ body {
 *::after,
 *::before {
   box-sizing: inherit;
+}
+section {
+  width: 100%;
+  height: 100%;
+  padding-top: 176px;
 }
 .clearfix::after {
   content: '';
@@ -26,6 +30,11 @@ body {
   padding: 0;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
   padding-top: 22px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
 }
 .header__row {
   display: -webkit-flex;
@@ -183,7 +192,7 @@ body {
 }
 .navigation {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: 2;
   position: absolute;
   top: 0;
@@ -277,4 +286,205 @@ body {
 }
 .social__item:hover a {
   opacity: 1;
+}
+.popupform {
+  display: none;
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  background: #eee;
+  padding: 20px 30px;
+  overflow-y: auto;
+}
+.popupform-field {
+  position: relative;
+}
+.popupform-field label.error {
+  position: absolute;
+  top: -16px;
+  left: 0;
+  font-size: 12px;
+  color: red;
+}
+.popupform-inner {
+  max-height: 600px;
+  margin: auto;
+}
+.popupform-thanks {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  display: none;
+  background: #fff;
+}
+.popupform-thanks-content {
+  margin: auto;
+  max-width: 600px;
+  padding: 20px;
+}
+.popupform-thanks-content h2.title-form {
+  font-size: 30px;
+}
+.popupform .btn-form-close {
+  position: absolute;
+  display: block;
+  width: 25px;
+  height: 25px;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  transition: all .5s ease;
+  background: url('../img/delete.svg');
+}
+.popupform .btn-form-close:hover {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  transition: all .5s ease;
+}
+.popupform .title-form {
+  font-size: 50px;
+  line-height: 50px;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 0px;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.popupform p {
+  display: block;
+  max-width: 915px;
+  padding: 0 15px;
+  margin: 0 auto;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  line-height: 16px;
+}
+.popupform form {
+  max-width: 430px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.popupform input[type="text"],
+.popupform input[type="email"],
+.popupform textarea {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  font-size: 18px;
+  line-height: 18px;
+  height: 18px;
+  padding: 13px 20px;
+  color: #5b5b5b;
+  border: 2px solid #ddd;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  border-radius: 6px;
+  outline: 0;
+  margin-bottom: 20px;
+  height: 48px;
+  background: #FFF;
+}
+.popupform input[type="text"]:hover,
+.popupform input[type="email"]:hover,
+.popupform textarea:hover {
+  border: 2px solid #4fd2fa;
+}
+.popupform input[type="text"]:focus,
+.popupform input[type="email"]:focus,
+.popupform textarea:focus {
+  border: 2px solid #06abdd;
+}
+.popupform textarea {
+  height: 130px;
+  font-family: Arial, sans-serif;
+}
+.popupform input[type="file"] {
+  display: none;
+}
+.popupform .btn-file {
+  display: block;
+  width: 100%;
+  height: 48px;
+  font-size: 16px;
+  background: #80dffc;
+  line-height: 50px;
+  border-radius: 4px;
+  color: #686868;
+  cursor: pointer;
+  transition: .15s;
+  margin-bottom: 0;
+  text-align: center;
+}
+.popupform .btn-file:hover {
+  background: #06abdd;
+  transition: .15s;
+  color: #282828;
+}
+.popupform .btn-file:active,
+.popupform .btn-file:focus {
+  outline: none;
+}
+.popupform .btn-text {
+  display: block;
+  margin: 0 auto;
+  min-width: 180px;
+  height: 48px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px;
+  font-weight: 500;
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: .25s;
+  border-radius: 4px;
+  color: #686868;
+  background: #80dffc;
+  font-family: 'Open Sans', Arial, sans-serif;
+}
+.popupform .btn-text:hover {
+  background: #06abdd;
+  color: #282828;
+}
+.popupform .btn-text:focus {
+  outline: none;
+}
+.popupform .confidentiality {
+  margin: 10px 0;
+}
+.confidentiality {
+  font-size: 11px;
+  text-align: center;
+  color: #757575;
+}
+.confidentiality a {
+  text-decoration: underline;
+  color: #757575;
+  transition: .2s;
+}
+.confidentiality a:hover,
+.confidentiality a:active {
+  color: #282828;
+  transition: .2s;
+}
+.mark {
+  width: 200px;
+  margin: 0 auto;
+}
+.mark .checkmark {
+  stroke: #ffee00;
+  stroke-dashoffset: 745.74853515625;
+  stroke-dasharray: 745.74853515625;
+  animation: dash 2s ease-out forwards;
 }
