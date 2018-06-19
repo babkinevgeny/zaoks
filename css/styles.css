@@ -488,3 +488,143 @@ section {
   stroke-dasharray: 745.74853515625;
   animation: dash 2s ease-out forwards;
 }
+.container {
+  max-width: 1456px;
+  margin: 0 auto;
+}
+.title--section {
+  font-size: 20px;
+  box-sizing: border-box;
+  font-family: Open Sans, sans-serif;
+  text-align: left;
+  text-indent: 0;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #06abdd;
+  text-align: center;
+}
+.category {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-around;
+}
+.category__item {
+  width: 20%;
+  padding: 20px 0;
+}
+.category__item a {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.category__item a:hover .category__title {
+  color: #06abdd;
+}
+.category__icon {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  background: red;
+  margin-bottom: 20px;
+}
+.category__title {
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+  font-family: 'Open Sans', sans-serif;
+  text-indent: 0;
+  font-size: 16px;
+  letter-spacing: 0.4px;
+  text-align: center;
+  color: #000;
+  line-height: 20px;
+}
+.category--processing .category__item:nth-child(1) .category__icon {
+  background: url('../img/sprite.png') no-repeat;
+  background-position: 0 0;
+}
+.category--processing .category__item:nth-child(1) a:hover .category__icon {
+  background: url('../img/sprite.png') no-repeat;
+  background-position: -90px 0;
+}
+.category--processing .category__item:nth-child(2) .category__icon {
+  background: url('../img/sprite.png') no-repeat;
+  background-position: -180px 0;
+}
+.category--processing .category__item:nth-child(2) a:hover .category__icon {
+  background: url('../img/sprite.png') no-repeat;
+  background-position: -270px 0;
+}
+.category--processing .category__item:nth-child(3) .category__icon {
+  background: url('../img/sprite.png') no-repeat;
+  background-position: -360px 0;
+}
+.category--processing .category__item:nth-child(3) a:hover .category__icon {
+  background: url('../img/sprite.png') no-repeat;
+  background-position: -450px 0;
+}
+.category--processing .category__item:nth-child(4) .category__icon {
+  background: url('../img/sprite.png') no-repeat;
+  background-position: -540px 0;
+}
+.category--processing .category__item:nth-child(4) a:hover .category__icon {
+  background: url('../img/sprite.png') no-repeat;
+  background-position: -630px 0;
+}
+.category--processing .category__item:nth-child(5) .category__icon {
+  background: url('../img/sprite.png') no-repeat;
+  background-position: -720px 0;
+}
+.category--processing .category__item:nth-child(5) a:hover .category__icon {
+  background: url('../img/sprite.png') no-repeat;
+  background-position: -810px 0;
+}
+.category--goods .category__item:nth-child(1) .category__icon {
+  background: url('../img/sprite.png') no-repeat;
+  background-position: -900px 0;
+}
+.category--goods .category__item:nth-child(1) a:hover .category__icon {
+  background: url('../img/sprite.png') no-repeat;
+  background-position: -990px 0;
+}
+.category--goods .category__item:nth-child(2) .category__icon {
+  background: url('../img/sprite.png') no-repeat;
+  background-position: -1080px 0;
+}
+.category--goods .category__item:nth-child(2) a:hover .category__icon {
+  background: url('../img/sprite.png') no-repeat;
+  background-position: -1170px 0;
+}
+.category--goods .category__item:nth-child(3) .category__icon {
+  background: url('../img/sprite.png') no-repeat;
+  background-position: -1260px 0;
+}
+.category--goods .category__item:nth-child(3) a:hover .category__icon {
+  background: url('../img/sprite.png') no-repeat;
+  background-position: -1348px 0;
+}
+.category--goods .category__item:nth-child(4) .category__icon {
+  background: url('../img/sprite.png') no-repeat;
+  background-position: -1440px 0;
+}
+.category--goods .category__item:nth-child(4) a:hover .category__icon {
+  background: url('../img/sprite.png') no-repeat;
+  background-position: -1530px 0;
+}
+.category--goods .category__item:nth-child(5) .category__icon {
+  background: url('../img/sprite.png') no-repeat;
+  background-position: -1620px 0;
+}
+.category--goods .category__item:nth-child(5) a:hover .category__icon {
+  background: url('../img/sprite.png') no-repeat;
+  background-position: -1710px 0;
+}
