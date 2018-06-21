@@ -1,0 +1,83 @@
+.advantages{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-wrap: wrap;
+  &__item{
+    width: 25%;
+    padding-left: 92px;
+    padding-right: 5px;
+    position: relative;
+    margin: 10px 0;
+    &:after{
+      content: '';
+      display: block;
+      width: 72px;
+      height: 72px;
+      background: url('../img/sprite--advantages.png') no-repeat;
+      position: absolute;
+      top: 0;
+      left: 5px;
+    }
+    &:nth-child(1){
+      &::after{
+        background-position: 0 0;
+      }
+    }
+    &:nth-child(2){
+      &::after{
+        background-position: -82px 0;
+      }
+    }
+    &:nth-child(3){
+      &::after{
+        background-position: -164px 0;
+      }
+    }
+    &:nth-child(4){
+      &::after{
+        background-position: -246px 0;
+      }
+    }
+    &:nth-child(5){
+      &::after{
+        background-position: -328px 0;
+      }
+    }
+    &:nth-child(6){
+      &::after{
+        background-position: -410px 0;
+      }
+    }
+    &:nth-child(7){
+      &::after{
+        background-position: -492px 0;
+      }
+    }
+    &:nth-child(8){
+      &::after{
+        background-position: -574px 0;
+      }
+    }
+  }
+  &__title{
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 19px;
+    color: @blue;
+    letter-spacing: 0.3px;
+    line-height: 23px;
+    margin-bottom: 5px;
+  }
+  &__text{
+    font-weight: 600;
+    font-style: 14px;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    text-align: justify;
+    line-height: 16px;
+  }
+}
