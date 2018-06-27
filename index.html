@@ -10,6 +10,9 @@
   <link rel="shortcut icon" href="/img/favicon.png" type="image/png">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/onepage-scroll.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
   <link rel="stylesheet" href="css/styles.css">
   <!-- <script src='https://www.google.com/recaptcha/api.js'></script> -->
 </head>
@@ -255,11 +258,68 @@
         </ul>
       </div>
     </section>
+    <section class="recomend">
+      <div class="container">
+        <h1 class="title title--section">Нас рекомендуют</h1>
+    		<div class="owl-carousel owl-theme">
+            <div class="item">
+  			      <a href="img/recomend-baltmontazh.jpg" class="item-link">
+  			        <img class="item-img" src="img/recomend-baltmontazh.jpg" alt="">
+  			      </a>
+  			      <div class="item-undertitle">ООО "Балт Монтаж</div>
+  			    </div>
+  			    <div class="item">
+  			      <a href="img/recomend-impuls.jpg" class="item-link">
+  			        <img class="item-img" src="img/recomend-impuls.jpg" alt="">
+  			      </a>
+  			      <div class="item-undertitle">АО "НПО "Импульс"</div>
+  			    </div>
+  			    <div class="item">
+  			      <a href="img/recomend-kulakova.jpg" class="item-link">
+  			        <img class="item-img" src="img/recomend-kulakova.jpg" alt="">
+  			      </a>
+  			      <div class="item-undertitle">АО "Завод им. А.А. Кулакова"</div>
+  			    </div>
+  			    <div class="item">
+  			      <a href="img/recomend-promtrans.jpg" class="item-link">
+  			        <img class="item-img" src="img/recomend-promtrans.jpg" alt="">
+  			      </a>
+  			      <div class="item-undertitle">АО "НО ПРОМТРАНСАВТОМАТИКА"</div>
+  			    </div>
+  			    <div class="item">
+  			      <a href="img/recomend-radiotekhkomplekt.jpg" class="item-link">
+  			        <img class="item-img" src="img/recomend-radiotekhkomplekt.jpg" alt="">
+  			      </a>
+  			      <div class="item-undertitle">ОАО "РАДИОТЕХКОМПЛЕКТ"</div>
+  			    </div>
+  			    <div class="item">
+  			      <a href="img/recomend-reilmatik.jpg" class="item-link">
+  			        <img class="item-img" src="img/recomend-reilmatik.jpg" alt="">
+  			      </a>
+  			      <div class="item-undertitle">ООО "РиэлМатик"</div>
+  			    </div>
+  			    <div class="item">
+  			      <a href="img/recomend-spetstekhnologii.jpg" class="item-link">
+  			        <img class="item-img" src="img/recomend-spetstekhnologii.jpg" alt="">
+  			      </a>
+  			      <div class="item-undertitle">ООО "СпецТехнологии СПб"</div>
+  			    </div>
+  			    <div class="item">
+  			      <a href="img/recomend-tehplast.jpg" class="item-link">
+  			        <img class="item-img" src="img/recomend-tehplast.jpg" alt="">
+  			      </a>
+  			      <div class="item-undertitle">ЗАО НПП "Импульс"</div>
+  			    </div>
+    			</div>
+      </div>
+    </section>
   </main>
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery.onepage-scroll.min.js"></script>
   <script src="js/form.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.js"></script>
   <script src="js/common.js"></script>
   <script>
   $("main").onepage_scroll({
@@ -324,6 +384,55 @@
             }
           });
         }
+      });
+    });
+
+    /*Owl carousel*/
+    $(document).ready(function(){
+      $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        responsiveClass:true,
+        responsive:{
+            0:{
+                items:1,
+                nav:true
+            },
+            650:{
+                items:3,
+                nav:true
+            }
+        },
+        dots: false,
+        center: true,
+        autoplay: false
+    })
+    });
+
+    //Magnific popup
+    $(document).ready(function() {
+      $('.item-link').magnificPopup({
+        type:'image',
+        gallery: {
+          enabled: true, // set to true to enable gallery
+
+          preload: [0,2], // read about this option in next Lazy-loading section
+
+            navigateByImgClick: true,
+
+      arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>', // markup of an arrow button
+
+        tPrev: 'Previous (Left arrow key)', // title for left button
+        tNext: 'Next (Right arrow key)', // title for right button
+        tCounter: '<span class="mfp-counter">%curr% of %total%</span>' // markup of counter
+      },
+      removalDelay: 300,
+
+      // Class that is added to popup wrapper and background
+      // make it unique to apply your CSS animations just to this exact popup
+      mainClass: 'mfp-fade'
+
+
       });
     });
   </script>
