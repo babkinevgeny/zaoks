@@ -154,8 +154,11 @@
   </section>
 
   <main>
-    <section style="background:lightblue;">
-      <h2>Первая страница</h2>
+    <section class="slider owl-carousel owl-theme">
+      <div class="item item--first"></div>
+      <div class="item item--second"></div>
+      <div class="item item--third"></div>
+      <div class="item item--fourth"></div>
     </section>
     <section style="background:white;">
       <div class="container">
@@ -389,7 +392,7 @@
 
     /*Owl carousel*/
     $(document).ready(function(){
-      $('.owl-carousel').owlCarousel({
+      $('.recomend .owl-carousel').owlCarousel({
         loop:true,
         margin:10,
         responsiveClass:true,
@@ -406,7 +409,17 @@
         dots: false,
         center: true,
         autoplay: false
-    })
+      })
+    });
+
+    $(document).ready(function(){
+      $('.slider').owlCarousel({
+        loop:true,
+        items:1,
+        dots: false,
+        autoplay: true,
+        animateOut: 'fadeOut'
+      })
     });
 
     //Magnific popup
