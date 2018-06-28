@@ -7,6 +7,7 @@ section.slider{
     padding: 0;
     background-position: center center;
     background-repeat: no-repeat;
+    position: relative;
     &--first{
       background-image: url('../img/slider1.jpg');
     }
@@ -19,6 +20,30 @@ section.slider{
     &--fourth{
       background-image: url('../img/slider4.jpg');
     }
+    .btn--link{
+      position: absolute;
+      top: 255px;
+      left: 135px;
+    }
   }
+}
 
+.btn{
+  &--link{
+    padding: 13px 30px;
+    border: 1px solid @blue;
+    display: inline-block;
+    font-family: 'Open Sans', Arial, sans-serif;
+    text-align: left;
+    text-indent: 0;
+    font-size: 13px;
+    color: #fff;
+    text-decoration: none;
+    background: transparent;
+    font-weight: 600;
+    transition: .5s;
+    &:hover{
+      background: @blue;
+    }
+  }
 }

@@ -297,6 +297,7 @@ section.slider .item {
   padding: 0;
   background-position: center center;
   background-repeat: no-repeat;
+  position: relative;
 }
 section.slider .item--first {
   background-image: url('../img/slider1.jpg');
@@ -309,6 +310,28 @@ section.slider .item--third {
 }
 section.slider .item--fourth {
   background-image: url('../img/slider4.jpg');
+}
+section.slider .item .btn--link {
+  position: absolute;
+  top: 255px;
+  left: 135px;
+}
+.btn--link {
+  padding: 13px 30px;
+  border: 1px solid #06abdd;
+  display: inline-block;
+  font-family: 'Open Sans', Arial, sans-serif;
+  text-align: left;
+  text-indent: 0;
+  font-size: 13px;
+  color: #fff;
+  text-decoration: none;
+  background: transparent;
+  font-weight: 600;
+  transition: .5s;
+}
+.btn--link:hover {
+  background: #06abdd;
 }
 .popupform {
   display: none;
